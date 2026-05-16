@@ -171,7 +171,7 @@ elif page == "Issuance Analysis":
         with c2:
             st.subheader("Issuance by Location")
             loc_value = df_issuance.groupby('Location')['Issued Value'].sum().reset_index()
-            fig_loc = px.pie(loc_value, values='Issued Value', names='Location', hole=0.3, color_discrete_sequence=px.colors.sequential.Agal)
+            fig_loc = px.pie(loc_value, values='Issued Value', names='Location', hole=0.3, color_discrete_sequence=px.colors.sequential.Viridis)
             fig_loc.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", font_color="white")
             st.plotly_chart(fig_loc, use_container_width=True)
             
